@@ -1,0 +1,128 @@
+@import './styles/variables.scss';
+
+.container {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include breakpoint(sm) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content {
+    width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $darkGrayishBlue;
+    border-radius: 20px;
+    padding-bottom: 20px;
+
+    @include breakpoint(sm) {
+      width: 550px;
+      height: 350px;
+    }
+
+    .header {
+      text-transform: uppercase;
+      color: $neonGreen;
+      letter-spacing: 3px;
+      font-size: $fs-sm;
+      padding-top: 10px;
+      margin-top: 20px;
+
+      @include breakpoint(sm) {
+        font-size: $fs-sm;
+        padding-top: 20px;
+        margin-top: 40px;
+      }
+    }
+    
+    .advice {
+      color: $lightCyan;
+      font-size: $fs-reg;
+      font-weight: $fw-regular;
+      text-align: center;
+      padding: 0 15px;
+      line-height: 1.3;
+
+      @include breakpoint(sm) {
+        font-size: $fs-sb;
+        padding: 0 45px;
+      }
+    }
+
+    .line {
+      margin-bottom: 30px;
+      padding-bottom: 10px;
+
+      img {
+        width: 200px;
+      }
+
+      @include breakpoint(sm) {
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+
+        img {
+          width: 450px;
+        }
+      }
+    }
+
+    .error {
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      color: $error;
+      margin-top: 15px;
+    }
+
+    .loading {
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      color: $lightCyan;
+      margin-top: 15px;
+    }
+
+  }
+
+  .button {
+    margin-top: -30px;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: $neonGreen;
+    cursor: pointer;
+    transition: box-shadow .3s;
+
+    img {
+      width: 22px;
+    }
+  }
+
+  .button:hover {
+    box-shadow: 0 0 25px 3px $neonGreen;
+  }
+
+  .button:active {
+    box-shadow: 0 0 25px 3px $lightCyan;
+    background-color: $grayishBlue;
+  }
+}
