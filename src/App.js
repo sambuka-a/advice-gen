@@ -50,8 +50,6 @@ function App() {
     }
   }, [])
 
-  console.log(advice);
-
   return (
     <div className={styles.container}>
       <div className={styles.content}>
